@@ -13,25 +13,30 @@ body {
 
 .testimonials {
   display: grid;
+  margin: 2em;
 }
 
-.first-card {
+.card {
+  padding: 2em;
+}
+
+#card-1 {
   background-color: v.$moderate-violet;
 }
 
-.second-card {
+#card-2 {
   background-color: v.$very-dark-grayish-blue;
 }
 
-.third-card {
+#card-3 {
   background-color: v.$white;
 }
 
-.fourth-card {
+#card-4 {
   background-color: v.$very-dark-blackish-blue;
 }
 
-.fifth-card {
+#card-5 {
   background-color: v.$white;
 }
 
@@ -42,23 +47,23 @@ body {
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
   }
 
-  .first-card {
+  #card-1 {
     grid-area: 1 / 1 / 2 / 3;
   }
 
-  .second-card {
+  #card-2 {
     grid-area: 1 / 3 / 2 / 4;
   }
 
-  .third-card {
+  #card-3 {
     grid-area: 2 / 1 / 3 / 2;
   }
 
-  .fourth-card {
+  #card-4 {
     grid-area: 2 / 2 / 3 / 4;
   }
 
-  .fifth-card {
+  #card-5 {
     grid-area: 1 / 4 / 3 / 5;
   }
 }
