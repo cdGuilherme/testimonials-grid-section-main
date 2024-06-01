@@ -2,3 +2,63 @@
 @use "variables" as v;
 @import url("../css/cssreset.css");
 @import url("../css/attribution.css");
+
+// TODO:
+// add custom grid for medium screen sizes
+// use hlsa for custom text opacity
+
+body {
+  margin: 0;
+}
+
+.testimonials {
+  display: grid;
+}
+
+.first-card {
+  background-color: v.$moderate-violet;
+}
+
+.second-card {
+  background-color: v.$very-dark-grayish-blue;
+}
+
+.third-card {
+  background-color: v.$white;
+}
+
+.fourth-card {
+  background-color: v.$very-dark-blackish-blue;
+}
+
+.fifth-card {
+  background-color: v.$white;
+}
+
+@media (min-width: 1024px) {
+  // grid-template: rows / columns
+  // grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end
+  .testimonials {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  }
+
+  .first-card {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .second-card {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  .third-card {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .fourth-card {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+
+  .fifth-card {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+}
