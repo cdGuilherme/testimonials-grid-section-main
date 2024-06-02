@@ -15,6 +15,27 @@ body {
   padding: 2em;
 }
 
+.card__profile {
+  display: flex;
+}
+.card__profile div {
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__profile-name, .card__profile-description {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: normal;
+}
+
+.card__profile-picture {
+  height: 2rem;
+  border-radius: 50%;
+}
+
 #card-1 {
   background-color: hsl(263, 55%, 52%);
   color: hsl(0, 0%, 100%);
