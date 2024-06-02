@@ -6,6 +6,10 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   background-color: hsl(210, 46%, 95%);
   color: hsl(219, 29%, 14%);
@@ -108,9 +112,9 @@ body {
   color: rgba(25, 33, 46, 0.7);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .testimonials {
-    grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(4, 16rem);
   }
   #card-1 {
     grid-area: 1/1/2/3;

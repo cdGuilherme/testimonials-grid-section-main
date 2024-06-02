@@ -36,6 +36,10 @@
 //////////////////
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   background-color: v.$light-grayish-blue;
   color: v.$dark-text;
@@ -104,11 +108,11 @@ body {
   @include card-dark-text;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   // grid-template: rows / columns
   // grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end
   .testimonials {
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(4, 16rem);
   }
 
   #card-1 {
