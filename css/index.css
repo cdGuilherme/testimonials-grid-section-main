@@ -1,18 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 @import url("../css/cssreset.css");
 @import url("../css/attribution.css");
+body {
+  font-size: 0.8125rem;
+}
+
 body {
   margin: 0;
   background-color: hsl(210, 46%, 95%);
   color: hsl(219, 29%, 14%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .testimonials {
   display: grid;
   margin: 2em;
+  gap: 2em;
 }
 
 .card {
   padding: 2em;
+  border-radius: 0.5rem;
 }
 
 .card__profile {
@@ -25,10 +35,17 @@ body {
   justify-content: center;
 }
 
-.card__profile-name, .card__profile-description {
+.card__profile-name,
+.card__profile-description {
   margin: 0;
   font-size: 0.65rem;
-  font-weight: normal;
+}
+
+.card__profile-name,
+.card__testimonial-title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .card__profile-picture {

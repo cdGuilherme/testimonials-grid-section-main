@@ -1,11 +1,13 @@
-@use "fonts";
+// https://onexception.dev/news/1252440/reusing-scss-mixins
+// https://sass-lang.com/guide/#partials
+@use "fonts" as f;
 @use "variables" as v;
 @import url("../css/cssreset.css");
 @import url("../css/attribution.css");
 
 // TODO:
 // add custom grid for medium screen sizes
-// use hlsa for custom text opacity
+// add image in first card
 
 // General Rules //
 ///////////////////
@@ -37,15 +39,18 @@ body {
   margin: 0;
   background-color: v.$light-grayish-blue;
   color: v.$dark-text;
+  @include f.barlow-semi-condensed-medium;
 }
 
 .testimonials {
   display: grid;
   margin: 2em;
+  gap: 2em;
 }
 
 .card {
   padding: 2em;
+  border-radius: 0.5rem;
 }
 
 .card__profile {
@@ -58,10 +63,15 @@ body {
   }
 }
 
-.card__profile-name, .card__profile-description {
+.card__profile-name,
+.card__profile-description {
   margin: 0;
   font-size: 0.65rem;
-  font-weight: normal;
+}
+
+.card__profile-name,
+.card__testimonial-title {
+  @include f.barlow-semi-condensed-semibold;
 }
 
 .card__profile-picture {
