@@ -13,6 +13,17 @@ $white: hsl(0, 0%, 100%);
 $light-gray: hsl(0, 0%, 81%);
 $light-grayish-blue: hsl(210, 46%, 95%);
 
+// Text
+
+// https://codesalad.dev/blog/color-manipulation-with-css-variables-and-hsl-16
+$dark-text: $very-dark-blackish-blue;
+$dark-text-50: transparentize($dark-text, 0.5);
+$dark-text-70: transparentize($dark-text, 0.3);
+
+$light-text: $white;
+$light-text-50: transparentize($light-text, 0.5);
+$light-text-70: transparentize($light-text, 0.3);
+
 // Note for text colors:
 
 // 1. "Verified Graduate" has the same color as the person's name with 50% opacity

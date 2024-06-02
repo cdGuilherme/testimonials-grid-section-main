@@ -7,8 +7,36 @@
 // add custom grid for medium screen sizes
 // use hlsa for custom text opacity
 
+// General Rules //
+///////////////////
+
+@mixin card-light-text {
+  color: v.$light-text;
+  .card__profile-description {
+    color: v.$light-text-50;
+  }
+  .card__testimonial-paragraph {
+    color: v.$light-text-70;
+  }
+}
+
+@mixin card-dark-text {
+  color: v.$dark-text;
+  .card__profile-description {
+    color: v.$dark-text-50;
+  }
+  .card__testimonial-paragraph {
+    color: v.$dark-text-70;
+  }
+}
+
+// Page styling //
+//////////////////
+
 body {
   margin: 0;
+  background-color: v.$light-grayish-blue;
+  color: v.$dark-text;
 }
 
 .testimonials {
@@ -22,22 +50,27 @@ body {
 
 #card-1 {
   background-color: v.$moderate-violet;
+  @include card-light-text;
 }
 
 #card-2 {
   background-color: v.$very-dark-grayish-blue;
+  @include card-light-text;
 }
 
 #card-3 {
   background-color: v.$white;
+  @include card-dark-text;
 }
 
 #card-4 {
   background-color: v.$very-dark-blackish-blue;
+  @include card-light-text;
 }
 
 #card-5 {
   background-color: v.$white;
+  @include card-dark-text;
 }
 
 @media (min-width: 1024px) {
