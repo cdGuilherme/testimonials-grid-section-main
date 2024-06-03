@@ -6,9 +6,7 @@
 @import url("../css/attribution.css");
 
 // TODO:
-// add image in first card
-// image border
-// card shadow
+// add space between testimonial title and paragraph
 
 // General Rules //
 ///////////////////
@@ -56,6 +54,7 @@ body {
 .card {
   padding: 2em;
   border-radius: 0.5rem;
+  box-shadow: 0 1rem 1rem v.$light-gray;
 }
 
 .card__profile {
@@ -81,12 +80,16 @@ body {
 
 .card__profile-picture {
   height: 2rem;
+  border: 2px solid transparentize(v.$white, 0.5);
   border-radius: 50%;
 }
 
 #card-1 {
   background-color: v.$moderate-violet;
   @include card-light-text;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 2em) top;
 }
 
 #card-2 {
@@ -102,6 +105,9 @@ body {
 #card-4 {
   background-color: v.$very-dark-blackish-blue;
   @include card-light-text;
+  .card__profile-picture {
+    border: 2px solid v.$moderate-violet;
+  }
 }
 
 #card-5 {
@@ -127,6 +133,7 @@ body {
 
   #card-1 {
     grid-area: 1 / 1 / 2 / 3;
+    background-position: 78% top;
   }
 
   #card-2 {
