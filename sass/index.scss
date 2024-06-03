@@ -30,12 +30,16 @@
   }
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 // Page styling //
 //////////////////
 
 body {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -51,8 +55,7 @@ body {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   padding: 2em;
   border-radius: 0.5rem;
   box-shadow: 0 1rem 1rem v.$light-gray;
@@ -62,15 +65,13 @@ body {
   display: flex;
   div {
     margin-left: 1em;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
   }
 }
 
 .card__testimonial {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: space-between;
   height: 100%;
 }
