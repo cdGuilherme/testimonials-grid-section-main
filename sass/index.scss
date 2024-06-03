@@ -6,7 +6,6 @@
 @import url("../css/attribution.css");
 
 // TODO:
-// add space between testimonial title and paragraph
 
 // General Rules //
 ///////////////////
@@ -52,6 +51,8 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
   border-radius: 0.5rem;
   box-shadow: 0 1rem 1rem v.$light-gray;
@@ -65,6 +66,13 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.card__testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card__profile-name,
@@ -82,6 +90,10 @@ body {
   height: 2rem;
   border: 2px solid transparentize(v.$white, 0.5);
   border-radius: 50%;
+}
+
+.card__testimonial-title {
+  padding-right: 0.8em;
 }
 
 #card-1 {
