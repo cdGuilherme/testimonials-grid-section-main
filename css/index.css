@@ -112,9 +112,29 @@ body {
   color: rgba(25, 33, 46, 0.7);
 }
 
+@media (min-width: 600px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 16rem);
+  }
+  #card-1 {
+    grid-area: 1/1/2/3;
+  }
+  #card-2 {
+    grid-area: 2/1/3/2;
+  }
+  #card-3 {
+    grid-area: 2/2/3/3;
+  }
+  #card-4 {
+    grid-area: 3/1/4/3;
+  }
+  #card-5 {
+    grid-area: 4/1/5/3;
+  }
+}
 @media (min-width: 1200px) {
   .testimonials {
-    grid-template: repeat(2, 1fr)/repeat(4, 16rem);
+    grid-template-columns: repeat(4, 16rem);
   }
   #card-1 {
     grid-area: 1/1/2/3;
