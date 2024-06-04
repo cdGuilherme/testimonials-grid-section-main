@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](#)
+- [Solution URL](https://www.frontendmentor.io/solutions/testimonials-grid-section-solution-1RYytiGxcW)
 - [Live Site URL](https://nanikore0.github.io/testimonials-grid-section-main/)
 
 ## My process
