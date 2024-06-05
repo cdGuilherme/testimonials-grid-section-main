@@ -56,3 +56,7 @@ Responsive Grid Layout and SASS.
 
 - GitHub - [nanikore](https://github.com/nanikore0)
 - Frontend Mentor - [@nanikore0](https://www.frontendmentor.io/profile/nanikore0)
+
+## Acknowledgments
+
+Thanks [Gwenaël Magnenat](https://www.frontendmentor.io/profile/gmagnenat) for giving feedback on the code!

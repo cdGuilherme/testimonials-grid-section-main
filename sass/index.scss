@@ -2,33 +2,27 @@
 // https://sass-lang.com/guide/#partials
 @use "fonts" as f;
 @use "variables" as v;
-@import url("../css/cssreset.css");
-@import url("../css/attribution.css");
+@use "cssreset";
+@use "attribution";
 
 // TODO:
 
 // General Rules //
 ///////////////////
 
-@mixin card-light-text {
-  color: v.$light-text;
+@mixin transparent-text($color) {
+  color: $color;
   .card__profile-description {
-    color: v.$light-text-50;
+    color: transparentize($color, 0.5);
   }
   .card__testimonial-paragraph {
-    color: v.$light-text-70;
+    color: transparentize($color, 0.3);
   }
 }
 
-@mixin card-dark-text {
-  color: v.$dark-text;
-  .card__profile-description {
-    color: v.$dark-text-50;
-  }
-  .card__testimonial-paragraph {
-    color: v.$dark-text-70;
-  }
-}
+// @mixin above could also make use of taking the card background as a function argument
+// and using scale-color instead of transparentize as suggested in the solution comments.
+// Example: scale-color($color, $lightness: 50%);
 
 @mixin flex-column {
   display: flex;
@@ -93,7 +87,8 @@ body {
 }
 
 .card__profile-name {
-  letter-spacing: 0.5px;
+  // https://fedmentor.dev/posts/font-size-px/#letter-spacing
+  letter-spacing: 0.03125em; // using em so it scales with the text
 }
 
 .card__testimonial-title {
@@ -102,7 +97,7 @@ body {
 
 #card-1 {
   background-color: v.$moderate-violet;
-  @include card-light-text;
+  @include transparent-text(v.$light-text);
   background-image: url(../images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 2em) top;
@@ -110,17 +105,17 @@ body {
 
 #card-2 {
   background-color: v.$very-dark-grayish-blue;
-  @include card-light-text;
+  @include transparent-text(v.$light-text);
 }
 
 #card-3 {
   background-color: v.$white;
-  @include card-dark-text;
+  @include transparent-text(v.$dark-text);
 }
 
 #card-4 {
   background-color: v.$very-dark-blackish-blue;
-  @include card-light-text;
+  @include transparent-text(v.$light-text);
   .card__profile-picture {
     border: 2px solid v.$moderate-violet;
   }
@@ -128,11 +123,11 @@ body {
 
 #card-5 {
   background-color: v.$white;
-  @include card-dark-text;
+  @include transparent-text(v.$dark-text);
 }
 
 // Medium screen sizes
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .testimonials {
     grid-template-columns: repeat(2, 16rem);
   }
@@ -170,7 +165,7 @@ body {
 }
 
 // Large screen sizes
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .testimonials {
     // grid-template: repeat(2, 1fr) / repeat(4, 16rem);
     grid-template-columns: repeat(4, 16rem);

@@ -1,8 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
-@import url("../css/cssreset.css");
-@import url("../css/attribution.css");
 body {
   font-size: 0.8125rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 body {
@@ -68,7 +147,7 @@ body {
 }
 
 .card__profile-name {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.03125em;
 }
 
 .card__testimonial-title {
@@ -136,7 +215,7 @@ body {
   color: rgba(25, 33, 46, 0.7);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .testimonials {
     grid-template-columns: repeat(2, 16rem);
   }
@@ -157,7 +236,7 @@ body {
     grid-area: 4/1/5/3;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .testimonials {
     grid-template-columns: repeat(4, 16rem);
   }
