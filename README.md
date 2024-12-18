@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/testimonials-grid-section-solution-1RYytiGxcW)
-- [Live Site URL](https://nanikore0.github.io/testimonials-grid-section-main/)
+- [Live Site URL](https://cdguilherme.github.io/testimonials-grid-section-main/)
 
 ## My process
 
@@ -54,8 +54,8 @@ Responsive Grid Layout and SASS.
 
 ## Author
 
-- GitHub - [nanikore](https://github.com/nanikore0)
-- Frontend Mentor - [@nanikore0](https://www.frontendmentor.io/profile/nanikore0)
+- GitHub - [Guilherme Costa](https://github.com/cdGuilherme)
+- Frontend Mentor - [@cdGuilherme](https://www.frontendmentor.io/profile/cdGuilherme)
 
 ## Acknowledgments
 
